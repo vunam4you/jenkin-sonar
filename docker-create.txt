@@ -2,3 +2,4 @@ mkdir $PWD/jenkins
 chown 1000 $PWD/jenkins     (My uid is 1001, but for some reason docker runs it as uid 1000, which is a different user.)
 docker run --name jenkins-nam -d -p 49001:8080 -v $PWD/jenkins:/var/jenkins_home:z -t jenkins/jenkins
 docker run --name sonarqube-nam -d -p 9000:9000 -p 9092:9092 sonarqube
+
